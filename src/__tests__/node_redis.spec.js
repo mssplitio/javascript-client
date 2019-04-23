@@ -142,7 +142,7 @@ tape('NodeJS Redis / Connection Error', async function (assert) {
 
           clearTimeout(id);
 
-          client.destroy();
+          await client.destroy();
 
           assert.end();
         }, 1000);
